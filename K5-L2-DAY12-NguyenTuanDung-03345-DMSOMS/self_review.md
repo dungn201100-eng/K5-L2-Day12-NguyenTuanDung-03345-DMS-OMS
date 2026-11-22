@@ -6,14 +6,14 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 
 | Ảnh | Đối tượng | Loại lỗi | Ghi chú | Đã sửa? |
 |---|---|---|---|---|
-| S03_rgb | `child_seat` ghế giữa | guess | `occupied=yes`, guideline 4.8 không có `yes` (chỉ `no`/`unknown`) | Đã sửa S03_rgb, S03_ir và S06_ir trong export_final_v2 |
+| S03_rgb | `child_seat` ghế giữa | guess | `occupied=yes`; guideline v1.0 4.8 chỉ có `no`/`unknown`, sau đó coach cho phép `yes`. Mình chọn `unknown` vì không chắc bên trong ghế [XÁC NHẬN LÝ DO] | Đã sửa S03_rgb, S03_ir và S06_ir trong export_final_v2 |
 | S01_rgb | box `face` của người lớn | missing | Mình vẽ face ở S01_ir nhưng thiếu ở S01_rgb (4.5) | Đã sửa (bản mới có 14 face) |
 | D03 | `eye_left`/`eye_right` và 8 điểm mắt `face13` | flag | Mắt `unknown` nhưng điểm mắt không có cờ `occluded`/`outside` (4.6) | Không sửa: giữ nguyên `unknown` và cờ như cũ, có giải thích trong check_final_v2.txt |
 | D05 | `eye_right` và 4 điểm mắt phải | flag | Như D03 | Đã sửa (cờ điểm mắt phải) |
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
-Lỗi: Thuộc tính và cờ không nhất quán với nhau (đặt `occupied=yes` không hợp lệ; ghi mắt `unknown` mà không đánh cờ điểm mắt), và bỏ sót một đối tượng ở một trong hai ảnh của cùng cảnh (S01_rgb).
+Lỗi: Thuộc tính và cờ không nhất quán với nhau (đặt `occupied=yes` (guideline v1.0 4.8 không có, về sau coach cho phép); ghi mắt `unknown` mà không đánh cờ điểm mắt), và bỏ sót một đối tượng ở một trong hai ảnh của cùng cảnh (S01_rgb).
 
 Vì sao mình mắc: [ĐIỀN LÝ DO CỦA RIÊNG BẠN]
 

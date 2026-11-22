@@ -55,8 +55,8 @@ S02_ir.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
 S02_ir.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,,,
 S02_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,,,
 S02_rgb.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,,,
-S03_ir.png,child_seat,occupied,khác giá trị (IoU=0.93),yes,unknown,peer,4.8,Đổi occupied yes -> unknown (không có yes) (đã sửa trong export_final_v2)
-S03_rgb.png,child_seat,occupied,khác giá trị (IoU=0.94),yes,unknown,peer,4.8,Đổi occupied yes -> unknown (không có yes) (đã sửa trong export_final_v2)
+S03_ir.png,child_seat,occupied,khác giá trị (IoU=0.93),yes,unknown,peer,4.8,Đổi occupied yes -> unknown (guideline v1.0 4.8; sau đó coach cho phép yes nhưng mình giữ unknown vì không xác định chắc bên trong ghế) (đã sửa trong export_final_v2)
+S03_rgb.png,child_seat,occupied,khác giá trị (IoU=0.94),yes,unknown,peer,4.8,Đổi occupied yes -> unknown (guideline v1.0 4.8; sau đó coach cho phép yes nhưng mình giữ unknown vì không xác định chắc bên trong ghế) (đã sửa trong export_final_v2)
 S04_ir.png,face,eye_left,khác giá trị (IoU=0.71),open,unknown,,,
 S04_ir.png,face,eye_right,khác giá trị (IoU=0.71),open,unknown,,,
 S04_ir.png,face,gaze_zone,khác giá trị (IoU=0.71),lap,other,,,
@@ -69,7 +69,7 @@ S04_rgb.png,face,glasses,khác giá trị (IoU=0.67),none,unknown,,,
 S04_rgb.png,object,box,chỉ có ở peer (hoặc IoU thấp),,,,,
 S05_ir.png,infant_seat,facing,khác giá trị (IoU=0.92),front,rear,,,
 S05_rgb.png,infant_seat,facing,khác giá trị (IoU=0.94),front,rear,,,
-S06_ir.png,child_seat,occupied,khác giá trị (IoU=0.90),yes,unknown,peer,4.8,Đổi occupied yes -> unknown (không có yes) (đã sửa trong export_final_v2)
+S06_ir.png,child_seat,occupied,khác giá trị (IoU=0.90),yes,unknown,peer,4.8,Đổi occupied yes -> unknown (guideline v1.0 4.8; sau đó coach cho phép yes nhưng mình giữ unknown vì không xác định chắc bên trong ghế) (đã sửa trong export_final_v2)
 S06_ir.png,face,eye_left,khác giá trị (IoU=0.73),open,unknown,,,
 S06_ir.png,face,eye_right,khác giá trị (IoU=0.73),open,unknown,,,
 S06_ir.png,face,glasses,khác giá trị (IoU=0.73),none,unknown,,,

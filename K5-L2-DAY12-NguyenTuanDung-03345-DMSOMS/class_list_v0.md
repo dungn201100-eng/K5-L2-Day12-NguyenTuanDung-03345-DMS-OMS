@@ -19,7 +19,7 @@ Mỗi lớp trả lời: **model cần nhận ra cái này để làm gì?**
 | # | Lớp / thuộc tính | Giá trị | Để làm gì (chức năng OMS) | Nhìn thấy được trên IR? |
 |---|---|---|---|---|
 | 1 | person + seat | seat theo xe: rear_left/middle/right… | Đếm người, biết ghế nào có người để nhắc dây an toàn, điều khiển túi khí | Có (hình dạng, vị trí) |
-| 2 | child_seat (occupied) | no / unknown | Phát hiện ghế trẻ em để tắt túi khí ghế trước và nhắc kiểm tra; không dùng `yes` vì không chắc trong ảnh | Có (hình dạng); bên trong ghế có thể không thấy |
+| 2 | child_seat (occupied) | no / unknown (coach cho phép thêm yes) | Phát hiện ghế trẻ em để tắt túi khí ghế trước và nhắc kiểm tra; `unknown` khi không chắc bên trong ghế | Có (hình dạng); bên trong ghế có thể không thấy |
 | 3 | infant_seat (facing) | rear / front | Phát hiện nôi xách và hướng đặt (quay lưng với chiều xe là nguy hiểm nếu túi khí bật) | Có (hình dạng) |
 | 4 | object (type) | bag / box / cup / other | Phát hiện vật bỏ quên và vật có thể thành vật bay trong va chạm | Có, nhưng không phân biệt vật bằng màu |
 | 5 | face (OMS: chỉ box) | box theo người | Đếm số người nhìn thấy mặt, xác nhận người ngồi thật | Có phần lớn; mắt và kính thường `unknown` |
@@ -28,9 +28,9 @@ Mỗi lớp trả lời: **model cần nhận ra cái này để làm gì?**
 
 ## 2 câu hỏi leo thang
 
-1. Câu hỏi: Khi trong ghế trẻ em có hình giống trẻ em đang ngồi, guideline v1.0 nói "không gán" và `occupied` không có giá trị `yes`. Vậy gán `child_seat` thế nào: `occupied=unknown`, hay cần thêm giá trị `yes` và lớp riêng cho trẻ em?
+1. Câu hỏi: Khi trong ghế trẻ em có hình giống trẻ em đang ngồi, guideline v1.0 nói "không gán" và `occupied` chưa có `yes`; coach sau đó cho phép `yes`. Khi nào dùng `yes`, khi nào `unknown`, và có cần lớp riêng cho trẻ em không?
    Khung ví dụ: G06 S06_ir.
-   Bạn tạm gán thế nào và vì sao: Theo 4.8, ghi `occupied=unknown` (không dùng `yes`), box `child_seat` ôm cả ghế, và báo coach thay vì tự đặt luật mới (RULES §4).
+   Bạn tạm gán thế nào và vì sao: Mình nộp bản `occupied=unknown` (không chắc bên trong ghế), box `child_seat` ôm cả ghế, và hỏi coach tiêu chí dùng `yes`.
 2. Câu hỏi: Phân biệt `infant_seat` (nôi xách) và `child_seat` (ghế lưng cao) bằng tiêu chí hình dạng nào khi ảnh không rõ quai xách?
    Khung ví dụ: G06 S02_rgb, S07_rgb và S08_rgb (mình và bạn ghép gán khác lớp ghế ở các khung này).
    Bạn tạm gán thế nào và vì sao: Ở S02 mình gán `child_seat` (`occupied=no`) cho ghế bên phải ảnh, bạn gán `infant_seat`. Ở S07 mình gán `infant_seat` cho ghế giữa, bạn gán `child_seat`. Chưa thống nhất, cần tiêu chí hình dạng.
