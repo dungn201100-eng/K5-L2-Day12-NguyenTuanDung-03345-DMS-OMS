@@ -3,7 +3,6 @@ File: export_final.zip
   [WARN] D03.png: eye_left=unknown nhưng không điểm left_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
   [WARN] D03.png: eye_right=unknown nhưng không điểm right_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
   [WARN] D05.png: eye_right=unknown nhưng không điểm right_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
-  [ERROR] S03_ir.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
-  [ERROR] S03_rgb.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
-  [ERROR] S06_ir.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
-Kết quả: 3 lỗi, 3 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+Kết quả: 0 lỗi, 3 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Giải thích cảnh báo: đây là bản trước review chéo. D03 giữ nguyên ở bản sau (xem check_final_v2.txt); D05 (mắt phải unknown, thiếu cờ điểm mắt) đã được sửa trong export_final_v2.zip.
