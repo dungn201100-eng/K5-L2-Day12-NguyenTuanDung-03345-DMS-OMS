@@ -5,4 +5,4 @@ File: export_final_v2.zip
 Kết quả: 0 lỗi, 2 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
 
 Giải thích cảnh báo còn lại:
-- D03 (eye_left, eye_right = unknown, điểm mắt không có cờ): mắt ghi unknown vì tròng kính có đốm phản xạ LED nên không phân biệt được open/closed (4.4-1, 4.5); các điểm mắt vẫn đặt theo mép mắt nhìn thấy được dưới kính nên không đánh cờ occluded/outside. Bạn ghép (Nguyễn Tiến Thịnh) đánh occluded cho các điểm này, hai bạn khác nhau ở chỗ này (disagreement_log.csv, dòng D03). [XÁC NHẬN LẠI LÝ DO BẰNG ẢNH]
+- D03 (eye_left, eye_right = unknown, điểm mắt không có cờ): mắt ghi unknown vì tròng kính có đốm phản xạ LED nên không phân biệt được open/closed (4.4-1, 4.5); các điểm mắt vẫn đặt theo mép mắt nhìn thấy được dưới kính nên không đánh cờ occluded/outside. Bạn ghép (Nguyễn Tiến Thịnh) đánh occluded cho các điểm này, hai bạn khác nhau ở chỗ này (disagreement_log.csv, dòng D03).

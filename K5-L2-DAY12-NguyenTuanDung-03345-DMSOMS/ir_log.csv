@@ -1,6 +1,7 @@
 frame_id,source,phenomenon,affected_field,effect_on_label
-S06_ir,IR_sim,"ghế trẻ em xuất hiện rõ trên bản IR-sim nhưng bản RGB cùng cảnh quá tối [XÁC NHẬN BẰNG MẮT]","child_seat (box, occupied)","gán box ở _ir, đặt occupied=unknown; ở _rgb tối thì chỉnh brightness trước khi quyết định có box hay không"
-S01_ir,IR_sim,"IR-sim chỉ có độ sáng, không phân biệt vật bằng màu [XÁC NHẬN BẰNG MẮT]","object.type","phân loại theo hình dạng (box/cup/bag), không chắc thì other"
-S04_ir,IR_sim,"dây an toàn khó thấy trên áo tối trên bản IR-sim [XÁC NHẬN BẰNG MẮT]","seatbelt","giữ unknown nếu không thấy dây; không suy từ ảnh RGB cùng cảnh"
-D03,real_IR,"đốm phản xạ LED trên tròng kính che vùng mắt [XÁC NHẬN BẰNG MẮT]","eye_left, eye_right, các điểm mắt của face13","ghi unknown cho mắt, bật occluded cho 4 điểm mắt mỗi bên, không ghi open/closed"
-D05,real_IR,"vùng mắt phải bị che hoặc không rõ [XÁC NHẬN BẰNG MẮT]","eye_right, right_eye_* của face13","ghi unknown; điểm mắt phải đánh outside nếu không đoán được vị trí"
+S06_ir,IR_sim,"ghế trẻ em có box ở bản _ir nhưng bản _rgb tối cùng cảnh không có box ghế","child_seat (box, occupied)","gán box ở _ir, occupied=unknown; ảnh tối thì chỉnh brightness trên CVAT trước khi quyết định có box hay không"
+S01_ir,IR_sim,"ảnh IR-sim chỉ có độ sáng, không có màu để phân biệt vật","object.type","phân loại theo hình dạng và vị trí (box/cup/bag); không chắc thì other"
+S04_ir,IR_sim,"dây an toàn không nhận ra bằng màu trên ảnh IR-sim; SVIRO không có ai thắt dây","seatbelt","chỉ not_worn hoặc unknown, không dùng worn_correct"
+D03,real_IR,"đốm phản xạ LED trên tròng kính ở vùng mắt, glasses không rõ","eye_left, eye_right, glasses","ghi unknown cho cả hai mắt và glasses, không ghi open/closed; điểm mắt face13 vẫn đặt theo mép mắt thấy được và không bật cờ (giữ khác với bạn ghép)"
+D05,real_IR,"mắt phải bị che hoặc không thấy rõ","eye_right, right_eye_* của face13","ghi eye_right=unknown; 4 điểm mắt phải bật outside (điểm giữa mí trên có thêm occluded)"
+D01,real_IR,"mắt phải không thấy rõ trên ảnh NIR","eye_right, right_eye_* của face13","ghi eye_right=unknown; 4 điểm mắt phải bật outside"

@@ -35,4 +35,3 @@ Mỗi lớp trả lời: **model cần nhận ra cái này để làm gì?**
    Khung ví dụ: G06 S02_rgb, S07_rgb và S08_rgb (mình và bạn ghép gán khác lớp ghế ở các khung này).
    Bạn tạm gán thế nào và vì sao: Ở S02 mình gán `child_seat` (`occupied=no`) cho ghế bên phải ảnh, bạn gán `infant_seat`. Ở S07 mình gán `infant_seat` cho ghế giữa, bạn gán `child_seat`. Chưa thống nhất, cần tiêu chí hình dạng.
 
-> **TODO trước khi nộp:** đổi `G06` thành mã nhóm thật; xác nhận hai câu hỏi leo thang đúng với những gì bạn thấy trên ảnh.
