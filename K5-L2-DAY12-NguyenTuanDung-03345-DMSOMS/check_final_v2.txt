@@ -1,0 +1,8 @@
+File: export_final_v2.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=13, face=14, face13=6, hand=12, infant_seat=6, object=11, person=16, phone=1
+  [WARN] D03.png: eye_left=unknown nhưng không điểm left_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+  [WARN] D03.png: eye_right=unknown nhưng không điểm right_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+Kết quả: 0 lỗi, 2 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Giải thích cảnh báo còn lại:
+- D03 (eye_left, eye_right = unknown, điểm mắt không có cờ): mắt ghi unknown vì tròng kính có đốm phản xạ LED nên không phân biệt được open/closed (4.4-1, 4.5); các điểm mắt vẫn đặt theo mép mắt nhìn thấy được dưới kính nên không đánh cờ occluded/outside. Bạn ghép (Nguyễn Tiến Thịnh) đánh occluded cho các điểm này, hai bạn khác nhau ở chỗ này (disagreement_log.csv, dòng D03). [XÁC NHẬN LẠI LÝ DO BẰNG ẢNH]
